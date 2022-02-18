@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://picsum.photos/seed/picsum/500/750);">
+  <div class="container">
+    <h1>This is your list of movies !</h1>
+    <p>Browse movies per categories</p>
+    <a class="btn btn-flat" href="#">Discover more</a>
+  </div>
+</div>
+
+<ul>
+<% @lists.each do |list| %>
+  <li><%= link_to list.name, list_path(list.id) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Create a new list', new_list_path %>
